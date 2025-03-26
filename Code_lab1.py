@@ -155,7 +155,7 @@ def run_parallel(df_pandas, num_cpus=None):
 
 if __name__ == '__main__':
     df_lazy = pl.scan_csv(
-        "C:/Users/37068/Desktop/UNIVERSITETAS/Magistras/2 kursas/Didžiųjų duomenų analizė/Lab1/aisdk-2025-01-22.csv",
+        "./aisdk-2025-01-22.csv",
         schema_overrides={"# Timestamp": pl.Utf8, "MMSI": pl.Int64, "Latitude": pl.Float64, "Longitude": pl.Float64, "SOG": pl.Float64}
     )
 

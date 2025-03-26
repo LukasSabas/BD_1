@@ -173,7 +173,7 @@ def run_task(chunk):
 # Function to test configurations
 def test_various_configurations(df_pandas):
     cpu_configs = [16, 24, 48]
-    chunk_configs = [10000, 100000]
+    chunk_configs = [50000, 200000]
     results = []
 
     for num_cpus in cpu_configs:
@@ -240,7 +240,7 @@ def plot_results(results, output_dir="."):
 if __name__ == '__main__':
     # Load data
     df_lazy = pl.scan_csv(
-        "C:/Users/37068/Desktop/UNIVERSITETAS/Magistras/2 kursas/Didžiųjų duomenų analizė/Lab1/aisdk-2025-01-22.csv",
+        "./aisdk-2025-01-22.csv",
         schema_overrides={"# Timestamp": pl.Utf8, "MMSI": pl.Int64, "Latitude": pl.Float64, "Longitude": pl.Float64, "SOG": pl.Float64}
     ) 
 
